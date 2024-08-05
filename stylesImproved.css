@@ -8,50 +8,42 @@ body{
     position: fixed;
     top: 0;
     width: 100%;
-    background: #526bb0;
+    background: #000000;
     height: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-size: 1rem;
     z-index: 999;
 }
 
 .navbar__container{
     justify-content: space-between;
-    max-width: 1920px;
-    margin: 0 auto;
 }
 
 .navbar__menu{
     list-style: none;
-    position: absolute;
-    right: 10px;
-    top: 0;
-    display: inline;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 .navbar__item1, .navbar__item2{
-    justify-content: center;
-    align-items: center;
-    display: inline;
+    display: flex;
     font-family: cursive;
-    font-size: 30px;
+    font-size: 20px;
+    margin-top: 30px;
 }
 
 .home_button{
     list-style: none;
-    align-items: center;
-    justify-content: center;
+    align-items: left;
+    justify-content: left;
     position: absolute;
-    left: 10px;
-    top: 10px;
+    margin-top: -60px;
 }
 
 
 .navbar__links{
     padding: 5px;
-    color: #cad6ec;
+    color: #ffffff;
     text-decoration: none;
     opacity: 1;
     list-style: none;
@@ -59,15 +51,80 @@ body{
 }
 
 h1{
-    color: #0a3866;
-    position: absolute;
-    bottom: 200px;
-    left: 200px;
+    color: #000000;
+    position: fixed;
+    top: 40%;
+    right: 45%;
 }
 
 p{
-    position: absolute;
-    bottom: 180px;
-    left: 200px;
-    color: #124351
+    position: fixed;
+    right: 35%;
+    top: calc(50% + 50px);
+    color: #000000
 }
+
+/* CSS for screens slightly larger than the largest iPhone screen */
+
+@media only screen and (min-width: 414px) {
+    /* Adjustments for screens larger than iPhone */
+    .navbar__menu {
+      position: static;
+      display: flex;
+      margin-right: 10px; /* Adjust spacing */
+    }
+  
+    .navbar__item1,
+    .navbar__item2 {
+      display: inline-block; /* Ensure items are aligned horizontally */
+      margin-right: 20px; /* Adjust spacing */
+    }
+  
+    .home_button {
+      position: static;
+      margin-left: 10px; /* Adjust spacing */
+    }
+  
+    .mainPageName {
+      bottom: auto; /* Reset position */
+      left: auto; /* Reset position */
+      margin-top: 100px; /* Adjust spacing */
+      text-align: center; /* Center align on larger screens */
+    }
+  
+    .introduction {
+      bottom: auto; /* Reset position */
+      left: auto; /* Reset position */
+      margin-top: 20px; /* Adjust spacing */
+      text-align: center; /* Center align on larger screens */
+    }
+
+    .education__title{
+      bottom: auto; /* Reset position */
+      left: auto; /* Reset position */
+      margin-top: 100px; /* Adjust spacing */
+      text-align: left; /* Center align on larger screens */
+    }
+
+    .cc__information{
+      margin-top: -250px;
+      margin-left: 40px;
+    }
+
+    .skills{
+      margin-top: 75px;
+    }
+
+    .web{
+      margin-top: 50px;
+    }
+
+    .core{
+      margin-top: 50px;
+    }
+
+    .languages__info{
+      margin-top: -100px;
+      margin-left: 20px;
+    }
+  }
