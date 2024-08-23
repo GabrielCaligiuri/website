@@ -1,130 +1,375 @@
+/*Navbar and body styling*/
+ul{
+  list-style: none;
+}
+
+
 body{
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    margin: 0;
-    background-color: #cad6ec;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin: 0;
+  background-color: #cad6ec;
 }
 
 .navbar{
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: #000000;
-    height: 80px;
-    font-size: 1rem;
-    z-index: 999;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #000000;
+  height: 80px;
+  font-size: 1rem;
+  z-index: 999;
 }
 
 .navbar__container{
-    justify-content: space-between;
+  justify-content: space-between;
 }
 
 .navbar__menu{
-    list-style: none;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .navbar__item1, .navbar__item2{
-    display: flex;
-    font-family: cursive;
-    font-size: 20px;
-    margin-top: 30px;
+  display: flex;
+  font-family: cursive;
+  font-size: 20px;
+  margin-top: 20px;
 }
 
 .home_button{
-    list-style: none;
-    align-items: left;
-    justify-content: left;
-    position: absolute;
-    margin-top: -60px;
+  list-style: none;
+  align-items: left;
+  justify-content: left;
+  position: absolute;
+  margin-top: 3%;
+  left: 10px;
 }
 
 
 .navbar__links{
-    padding: 5px;
-    color: #ffffff;
-    text-decoration: none;
-    opacity: 1;
-    list-style: none;
-    cursor: pointer;
+  padding: 10px;
+  color: #ffffff;
+  text-decoration: none;
+  opacity: 1;
+  list-style: none;
+  cursor: pointer;
 }
 
-h1{
-    color: #000000;
+.navbar__home{
+  padding: 10px;
+  color: #ffffff;
+  text-decoration: none;
+  opacity: 1;
+  list-style: none;
+  cursor: pointer;
+  position: absolute;
+}
+
+
+@media screen and (max-width: 960px) {
+  .navbar__container{
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    padding: 0;
+  }
+
+  .navbar__menu {
+    display: grid;
+    grid-template-columns: auto;
+    margin: 0;
+    width: 100%;
+    position: absolute;
+    top: -1000px;
+    opacity: 0;
+    transition: all 0.5s ease;
+    height: 300px;
+    z-index: -1;
+  }
+
+  .navbar__menu.active {
+    background: #000000;
+    top: 100%;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 99;
+    height: 150px;
+    font-size: 1.6rem;
+  }
+
+  .navbar__links {
+    align-items: center;
+    text-align: center;
+    display: grid;
     position: fixed;
-    top: 40%;
-    right: 45%;
+    padding: 0px;
+    display: table;
+    width: fit-content;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: fit-content;
+
+  }
+
+  .navbar__toggle .bar{
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background: #ffffff;
+    display: block;
+    cursor: pointer;
+  }
+
+  .navbar__home{
+    position: fixed;
+    top: 20px;
+  }
+
+  #mobile-menu {
+    position: absolute;
+    top: 20%;
+    right: 5%;
+    transform: translate(5%, 20%);
+  }
+
+  #mobile-menu.is-active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  #mobile-menu.is-active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  #mobile-menu.is-active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
+
+/*End of Navbar and body styling*/
+
+/*For IndexImproved html*/
+
+h1{
+  color: #000000;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 p{
-    position: fixed;
-    right: 35%;
-    top: calc(50% + 50px);
-    color: #000000
+  color: #000000;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+}
+/*End of indexImproved.html css styling*/
+    
+/*Start of background.html css styling*/
+
+.education__title{
+  margin-top: 100px; /* Adjust spacing */
 }
 
-/* CSS for screens slightly larger than the largest iPhone screen */
+.cc__subcategory{
+  position: relative;
+}
 
-@media only screen and (min-width: 414px) {
-    /* Adjustments for screens larger than iPhone */
-    .navbar__menu {
-      position: static;
-      display: flex;
-      margin-right: 10px; /* Adjust spacing */
-    }
-  
-    .navbar__item1,
-    .navbar__item2 {
-      display: inline-block; /* Ensure items are aligned horizontally */
-      margin-right: 20px; /* Adjust spacing */
-    }
-  
-    .home_button {
-      position: static;
-      margin-left: 10px; /* Adjust spacing */
-    }
-  
-    .mainPageName {
-      bottom: auto; /* Reset position */
-      left: auto; /* Reset position */
-      margin-top: 100px; /* Adjust spacing */
-      text-align: center; /* Center align on larger screens */
-    }
-  
-    .introduction {
-      bottom: auto; /* Reset position */
-      left: auto; /* Reset position */
-      margin-top: 20px; /* Adjust spacing */
-      text-align: center; /* Center align on larger screens */
-    }
+.cc__information{
+  position: relative;
+  left: 50%;
+}
 
-    .education__title{
-      bottom: auto; /* Reset position */
-      left: auto; /* Reset position */
-      margin-top: 100px; /* Adjust spacing */
-      text-align: left; /* Center align on larger screens */
-    }
+.skills{
+  position: relative;
+}
 
-    .cc__information{
-      margin-top: -250px;
-      margin-left: 40px;
-    }
+.languages{
+  position: relative;
+}
 
-    .skills{
-      margin-top: 75px;
-    }
+.languages__info{
+  position: relative;
+  left: 50%;
+}
 
-    .web{
-      margin-top: 50px;
-    }
+.web{
+  position: relative;
+}
 
-    .core{
-      margin-top: 50px;
-    }
+.web__info{
+  position: relative;
+  left: 50%;
+}
 
-    .languages__info{
-      margin-top: -100px;
-      margin-left: 20px;
-    }
+.core{
+  position: relative;
+}
+
+.core__info{
+  position: relative;
+  left: 50%;
+}
+
+.jojos{
+  position: relative;
+}
+
+.jojos__info{
+  position: relative;
+  left: 50%;
+}
+
+.extra{
+  position: relative;
+}
+
+.CCclub{
+  position: relative;
+}
+
+.CCclub__info{
+  position: relative;
+  left: 50%;
+}
+
+/*Start of background.html screen size changes*/
+
+@media screen and (max-width: 999px) {
+  .cc__information{
+    top: 10px;
   }
+
+  .jojos__info{
+    top: 10px;
+  }
+}
+
+@media screen and (max-width: 549px) {
+  .cc__information{
+    height: fit-content;
+    top: 30px;
+  }
+
+  .cc__subcategory{
+    height: fit-content;
+  }
+
+  .jojos__info{
+    top: 15px;
+  }
+
+  .CCclub__info{
+    top: 10px;
+  }
+  
+}
+/*End of background.html css styling*/
+
+/*Start of projects.html css styling*/
+.projects__header{
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 10%;
+}
+
+.projects__col1{
+  position: relative;
+  top: 205px;
+  left: 25%;
+  transform: translate(-50%, -50%);
+}
+
+.projects__col2{
+  position: relative;
+  top: 15%;
+  left: 75%;
+  width: fit-content;
+  transform: translate(-50%, -50%);
+}
+
+.chess__header{
+  position: relative;
+  top: 275px;
+  width: fit-content;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.chess__photo{
+  position: relative;
+  height: 50%;
+  width: fit-content;
+  top: 500px;
+  right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+.chess__info{
+  position: relative;
+  width: 40%;
+  top: 300px;
+}
+
+.sudoku__header{
+  position: relative;
+}
+
+.sudoku__info{
+  position: relative;
+}
+
+.case__phone{
+  opacity: 0;
+}
+
+@media screen and (max-width: 960px){
+   .projects__header{
+    opacity: 0;
+  }
+  
+  .projects__col1{
+    opacity: 0;
+  }
+  
+  .projects__col2{
+    opacity: 0;
+  }
+  
+  .chess__header{
+    opacity: 0;
+  }
+  
+  .chess__photo{
+    opacity: 0;
+  }
+  
+  .chess__info{
+    opacity: 0;
+  }
+  
+  .sudoku__header{
+   opacity: 0;
+  }
+  
+  .sudoku__info{
+    opacity: 0;
+  }
+
+  .case__phone{
+    opacity: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

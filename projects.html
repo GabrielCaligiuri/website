@@ -6,10 +6,13 @@
         <title>Gabriel's Portofolio</title>
         <link rel="stylesheet" href="stylesImproved.css"/>
     </head>
-    <body>
+    <body class="projects__body">
         <header>
             <nav class="navbar">
                 <div class="navbar__container">
+                    <a href = "/indexImproved.html" class = "navbar__home">
+                        Gabriel Caligiuri
+                    </a>
                     <div class="navbar__toggle" id ="mobile-menu">
                         <span class="bar"></span>
                         <span class="bar"></span>
@@ -27,12 +30,38 @@
                             </a>
                         </li>
                     </ul>
-                    <li class="home_button">
-                        <a href = "/indexImproved.html" class = "navbar__links">
-                            Gabriel Caligiuri
-                        </a>
-                    </li>
                 </div>
             </nav>
+            <script src="app.js"></script>
+            <h1 class="projects__header">
+                Projects
+            </h1>
         </header>
+        <ul class="projects__col1">
+            <li>
+                <h2 class="chess__header">
+                    Chess
+                </h2>
+                <img class="chess__photo" src="chessJava.jpg" alt="Chess Program">
+                <p class="chess__info">
+                    A Java program that runs chess to be played by 2 people on the same computer, following all rules of chess
+                    , once the game ends the user has a choice to play again or exit the program.
+                    <br> <a href = "https://github.com/GabrielCaligiuri/projects/tree/main/chessJava" > source code </a>
+                </p>
+            </li>
+        </ul>
+        <ul class="projects__col2">
+            <li>
+                <h2 class="sudoku__header">
+                    Sudoku
+                </h2>
+                <p class="sudoku__info">
+                    Sudoku game with solver
+                    <br> <a href = "https://github.com/GabrielCaligiuri/projects"> source code </a>
+                </p>
+            </li>
+        </ul>
+        <p class="case__phone">
+            Please view this page on desktop.
+        </p>
     </body>
